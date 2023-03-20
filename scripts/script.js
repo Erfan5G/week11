@@ -15,8 +15,10 @@
 
 const enteredValue = prompt ("Enter the Value ") 
 function CalculateArea (radius) {
+    const radpara = document.querySelector("#radius")
+    radpara.textContent = `The enterd value is: ${enteredValue}`
     if (isNaN (radius) ) {
-        alert ("It is not a number")
+        console.log("It is not a number ")
     }
     else {
         const area = Math.PI * radius * radius ; 
@@ -25,7 +27,8 @@ function CalculateArea (radius) {
 }
 let result = CalculateArea(enteredValue) 
 if (result) {
-    console.log(result)
+    const padpara = document.querySelector("#result")
+    padpara.textContent = `The result with radius of ${enteredValue}, is ${result}` 
 }
 else {
     console.log("Not good ")
