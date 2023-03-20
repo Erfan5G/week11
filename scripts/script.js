@@ -49,11 +49,30 @@ function populatelist (myshoppinglist) {
         let new1 = document.createElement("li") 
         new1.textContent = item 
         ulelement.appendChild(new1)
-    }
-    
+    } 
+
 }
+
 
 
 
 let shoppinglist = ['breaad' , ' cheese' , 'Green pepper ' ]
 populatelist(shoppinglist)
+
+
+
+
+
+
+
+
+
+
+function squarelist () {
+    const squareaccess = document.querySelector("ul") 
+    squareaccess.classList.remove("circleList")
+    squareaccess.classList.add("squareList")
+}
+
+
+squarelist()
