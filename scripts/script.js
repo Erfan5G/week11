@@ -5,6 +5,11 @@
 
 // Function Calling 
 // greet("Erfan") 
-const name = (fname) => console.log(`Hello ${fname}`)
-name("Erfan")
-// Name is Erfan And I am so Happy to meet you all  
+// const name = (fname) => console.log(`Hello ${fname}`)
+// name("Erfan") 
+
+function hello (name ,time = "day") { 
+    console.log( `Hello ${name} good ${time} `) 
+}
+hello ('Erfan', "Boy")
+
