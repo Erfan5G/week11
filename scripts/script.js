@@ -13,23 +13,47 @@
 // }
 // hello ('Erfan', "Boy")
 
-const enteredValue = prompt ("Enter the Value ") 
-function CalculateArea (radius) {
-    const radpara = document.querySelector("#radius")
-    radpara.textContent = `The enterd value is: ${enteredValue}`
-    if (isNaN (radius) ) {
-        console.log("It is not a number ")
+// const enteredValue = prompt ("Enter the Value ") 
+// function CalculateArea (radius) {
+//     const radpara = document.querySelector("#radius")
+//     radpara.textContent = `The enterd value is: ${enteredValue}`
+//     if (isNaN (radius) ) {
+//         console.log("It is not a number ")
+//     }
+//     else {
+//         const area = Math.PI * radius * radius ; 
+//         return area.toFixed(2) 
+//     }
+// }
+// let result = CalculateArea(enteredValue) 
+// if (result) {
+//     const padpara = document.querySelector("#result")
+//     padpara.textContent = `The result with radius of ${enteredValue}, is ${result}` 
+// }
+// else {
+//     console.log("Not good ")
+// }
+
+function populatelist (myshoppinglist) { 
+    const ulelement = document.querySelector(".shopping") ;
+    console.log(ulelement)
+    for (let index = 0; index < shoppinglist.length; index++) {
+        const element = shoppinglist[index];
+        
+        let new1 = document.createElement("li") 
+        new1.textContent = element
+        ulelement.appendChild(new1)
     }
-    else {
-        const area = Math.PI * radius * radius ; 
-        return area.toFixed(2) 
+    //same as the upper one 
+    for (const item of shoppinglist) {
+        let new1 = document.createElement("li") 
+        new1.textContent = item 
+        ulelement.appendChild(new1)
     }
+    
 }
-let result = CalculateArea(enteredValue) 
-if (result) {
-    const padpara = document.querySelector("#result")
-    padpara.textContent = `The result with radius of ${enteredValue}, is ${result}` 
-}
-else {
-    console.log("Not good ")
-}
+
+
+
+let shoppinglist = ['breaad' , ' cheese' , 'Green pepper ' ]
+populatelist(shoppinglist)
